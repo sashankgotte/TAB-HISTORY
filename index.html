@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f6ed">
+  <meta name="description" content="Explore the amazing world of birds, animals, trees and plants. Discover species, their stories, and the nature around us.">
+  <title>TAB HISTORY — Explore • Discover • Learn</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="TAB HISTORY home">
+      <span class="brand-mark" aria-hidden="true">t<span>h</span></span>
+      <span class="brand-copy"><strong>TAB HISTORY</strong><small>EXPLORE • DISCOVER • LEARN</small></span>
+    </a>
+    <button class="mobile-menu" id="mobile-menu" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+      <a href="#home" class="nav-link active" data-page="home">Home</a>
+      <a href="#birds" class="nav-link" data-page="birds">Birds</a>
+      <a href="#animals" class="nav-link" data-page="animals">Animals</a>
+      <a href="#trees" class="nav-link" data-page="trees">Trees</a>
+      <a href="#plants" class="nav-link" data-page="plants">Plants</a>
+      <a href="#history" class="nav-link" data-page="history">History</a>
+      <a href="#quiz" class="nav-link" data-page="quiz">Quiz</a>
+      <a href="#about" class="nav-link" data-page="about">About</a>
+    </nav>
+    <button class="header-search" id="header-search" aria-label="Search species" title="Search species">⌕</button>
+  </header>
+
+  <main>
+    <section class="home-page page-section" id="home-page">
+      <section class="hero" id="home">
+        <div class="hero-content">
+          <div class="eyebrow"><span></span> A LITTLE CURIOSITY GOES A LONG WAY</div>
+          <h1>Discover the<br>amazing world of<br><em>birds, animals<br>&amp; plants.</em></h1>
+          <p class="hero-description">Explore species from around the world, discover their history, learn interesting facts, and understand the beauty of nature.</p>
+          <form class="hero-search search-form" role="search">
+            <span aria-hidden="true">⌕</span>
+            <input type="search" placeholder="Search birds, animals, trees or plants..." aria-label="Search birds, animals, trees or plants">
+            <button type="submit">Explore <span aria-hidden="true">→</span></button>
+          </form>
+          <div class="hero-note"><span class="note-dot"></span> A world of discovery, made for curious minds</div>
+        </div>
+        <div class="hero-art" aria-label="Illustration of a lush, green natural landscape">
+          <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1200&q=85" alt="Golden morning light over a green meadow" fetchpriority="high">
+          <div class="hero-image-wash"></div>
+          <div class="hero-caption"><span class="caption-icon">✳</span><span><strong>Nature has a story.</strong><small>Let's discover it together.</small></span></div>
+          <div class="floating-stats"><strong>100+</strong><span>species to explore</span></div>
+        </div>
+        <div class="hero-stamp" aria-hidden="true">THE<br>NATURE<br>NOTEBOOK</div>
+      </section>
+
+      <section class="category-section content-width" id="explore">
+        <div class="section-heading">
+          <div><span class="eyebrow">YOUR NEXT GREAT DISCOVERY</span><h2>Where will you <em>wander?</em></h2></div>
+          <p>Four paths into the natural world.<br>Pick one and start exploring.</p>
+        </div>
+        <div class="category-grid" id="category-grid"></div>
+      </section>
+
+      <section class="discovery-band">
+        <div class="discovery-inner content-width">
+          <div class="discovery-icon" aria-hidden="true">✳</div>
+          <div class="discovery-copy"><span class="eyebrow">A MOMENT OF WONDER</span><h2>Did you know?</h2><p id="fact-of-the-day"></p></div>
+          <button class="text-button" id="new-fact">Another fact <span>↗</span></button>
+        </div>
+      </section>
+
+      <section class="daily-section content-width">
+        <div class="daily-copy"><span class="eyebrow">YOUR DAILY DOSE OF NATURE</span><h2>One small discovery.<br><em>A whole new perspective.</em></h2><p>Meet a new member of the natural world and find out what makes it extraordinary.</p><button class="button button-dark" id="daily-discover">Meet today's discovery <span>→</span></button></div>
+        <article class="daily-card" id="daily-card"></article>
+      </section>
+      <section class="home-quiz content-width">
+        <div><span class="eyebrow">READY, CURIOUS MIND?</span><h2>Put your nature knowledge<br>to the test.</h2><p>Quick questions, surprising answers, and a little more wonder.</p></div>
+        <a href="#quiz" class="button button-light">Take the quiz <span>→</span></a>
+      </section>
+    </section>
+
+    <section class="catalog-page page-section hidden" id="catalog-page">
+      <div class="catalog-hero" id="catalog-hero">
+        <span class="eyebrow" id="catalog-kicker"></span><h1 id="catalog-title"></h1><p id="catalog-description"></p>
+      </div>
+      <div class="content-width catalog-content">
+        <div class="catalog-tools">
+          <form class="catalog-search search-form" role="search">
+            <span aria-hidden="true">⌕</span><input id="catalog-search-input" type="search" placeholder="Search name, scientific name, habitat..." aria-label="Search species">
+          </form>
+          <label class="filter-control"><span>Category</span><select id="category-filter" aria-label="Filter by category"><option value="">All categories</option></select></label>
+          <label class="filter-control"><span>Continent</span><select id="continent-filter" aria-label="Filter by continent"><option value="">Everywhere</option></select></label>
+          <label class="filter-control"><span>Habitat</span><select id="habitat-filter" aria-label="Filter by habitat"><option value="">All habitats</option></select></label>
+          <button class="clear-filters" id="clear-filters">Clear filters</button>
+        </div>
+        <div class="results-meta"><span id="result-count"></span><span>Choose a card to meet a species <span aria-hidden="true">↗</span></span></div>
+        <div class="species-grid" id="species-grid"></div>
+        <div class="empty-state hidden" id="empty-state"><span>◌</span><h3>No discoveries found just yet</h3><p>Try a different name, habitat, or continent.</p></div>
+      </div>
+    </section>
+
+    <section class="history-page page-section hidden" id="history-page">
+      <div class="inner-hero content-width"><span class="eyebrow">THE LIVING STORY OF NATURE</span><h1>Every species has<br>a <em>history.</em></h1><p>Nature's story is still being written. Discover where life began, how it changed, and how people have shared the planet with it.</p></div>
+      <div class="content-width history-content">
+        <div class="history-intro"><span class="history-number">01</span><div><h2>Then, now, and what's next.</h2><p>From ancient origins to the world we share today, each species carries a story millions of years in the making. Browse the collection to explore each one.</p></div></div>
+        <div class="history-grid" id="history-grid"></div>
+        <div class="history-note"><span>✳</span><p>Our natural history belongs to all of us. Learning about it is one small way to help protect what comes next.</p></div>
+      </div>
+    </section>
+
+    <section class="quiz-page page-section hidden" id="quiz-page">
+      <div class="inner-hero content-width"><span class="eyebrow">A FRIENDLY LITTLE CHALLENGE</span><h1>Curiosity looks<br><em>good on you.</em></h1><p>Pick an answer, learn something new, and see how much you already know about the natural world.</p></div>
+      <div class="quiz-panel content-width" id="quiz-panel"></div>
+      <div class="compare-panel content-width">
+        <div class="compare-heading"><div><span class="eyebrow">SIDE BY SIDE</span><h2>Compare two discoveries.</h2><p>What do two members of the natural world have in common?</p></div><span class="compare-symbol">↔</span></div>
+        <div class="compare-controls">
+          <label><span>First species</span><select id="compare-one" aria-label="First species"></select></label><span class="vs">VS</span><label><span>Second species</span><select id="compare-two" aria-label="Second species"></select></label>
+          <button class="button button-dark" id="compare-button">Compare <span>→</span></button>
+        </div>
+        <div id="compare-result" class="compare-result"></div>
+      </div>
+    </section>
+
+    <section class="about-page page-section hidden" id="about-page">
+      <div class="inner-hero content-width"><span class="eyebrow">A NOTEBOOK FOR THE NATURALLY CURIOUS</span><h1>For the things<br>that make you say <em>“wow.”</em></h1><p>TAB HISTORY is a friendly field guide to the incredible life we share this planet with.</p></div>
+      <div class="about-content content-width">
+        <div class="about-copy"><span class="eyebrow">OUR LITTLE BIG IDEA</span><h2>Learning about nature should feel like an adventure.</h2><p>We made TAB HISTORY for curious students and lifelong learners. It brings birds, animals, trees and plants into one welcoming place, where facts are easy to find and every species has a story worth telling.</p><p>Explore at your own pace. Search, compare, ask questions and follow your curiosity wherever it wanders.</p></div>
+        <div class="about-stat"><span>✳</span><strong>One planet.</strong><strong>Millions of stories.</strong><small>Start with one discovery.</small></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="footer-brand" href="#home">TAB HISTORY <span>✳</span></a><span>Made for curious minds and the planet we share.</span><a href="#home" class="back-top">Back to top ↑</a></footer>
+
+  <dialog class="species-dialog" id="species-dialog" aria-labelledby="dialog-name"><button class="dialog-close" id="dialog-close" aria-label="Close details">×</button><div id="species-details"></div></dialog>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
